@@ -26,11 +26,9 @@ public class PersonService{
 
     public MessageResponseDTO create(PersonDTO personDTO) {
         Person person = personMapper.toModel(personDTO);
-        Person savedPerson = personRepository.save(person);
+        Person savedPerson = personRepository.save(person);       
 
-        MessageResponseDTO messageResponse = createMessageResponse("Person successfully created with ID ", savedPerson.getId());
-
-        return messageResponse;
+        return createMessageResponse("Person successfully created with ID ", savedPerson.getId());
     }
 
     public PersonDTO findById(Long id) throws PersonNotFoundException {
