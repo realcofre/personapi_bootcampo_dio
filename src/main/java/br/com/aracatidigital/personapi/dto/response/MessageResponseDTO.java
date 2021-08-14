@@ -1,4 +1,4 @@
-package br.com.aracatidigital.personapi.dto;
+package br.com.aracatidigital.personapi.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
